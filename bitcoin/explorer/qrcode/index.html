@@ -1,1 +1,62 @@
-e
+<html>
+  <head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link rel="stylesheet" href="https://buity.github.io/css/style.css"/>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+	<link rel="shortcut" href="../../favicon.ico">
+	<title> Generateur de QRCode </title>
+	<script type="text/javascript" src="qrcode.js"></script>  
+  </head>
+  <body>
+
+	 <nav class="navbar navbar-inverse">
+		<div class="container-fluid">
+		  <div class="navbar-header">
+		      <a class="navbar-brand" href="https://buity.github.io/">LucOrne</a>
+		  </div>
+			<ul class="nav navbar-nav">
+			        <li><a href="https://buity.github.io/">Home</a></li>
+				<li><a href="https://buity.github.io/bitcoin/">Bitcoin</a></li>
+				<li><a href="https://buity.github.io/bitcoin/explorer/"> Online form</a></li>
+				<li class="active"><a href="https://buity.github.io/bitcoin/explorer/QRCode.html"> QRCode Generator</a></li>
+		        </ul>
+  		  </div> 
+	  </nav>
+	  
+	  <div class="container theme-showcase text-left" role="main">
+		<div class="jumbotron">
+			<span style="color:darkgrey ;font-weight:bold"> <h1> QRCode Generator </h1> </span>
+		</div>
+	  </div>
+	  
+	<div class="container text-center">
+				      
+	  <div class="container" padding-left="20px">
+		<p> Voici le QRCode associé au mot "Bonjour" et celui associé à "Je suis le meilleur"<br/> </p>
+		  <div>
+			<div id="qrcode"></div>
+				<script type="text/javascript">
+				var qrcode = new QRCode(document.getElementById("qrcode"), {
+					text: "Bonjour",
+					width: 256,
+					height: 256,
+					colorDark : "#0000CD",
+					colorLight : "#ffffff",
+					correctLevel : QRCode.CorrectLevel.H
+				});
+				</script>
+
+				<div id="qrcode2"></div>
+				<script type="text/javascript">
+				new QRCode(document.getElementById("qrcode2"), "Je suis le meilleur");
+				</script>
+			</div>
+		</div>
+	</div>
+	  
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="../custom.js"></script>
+  </body>
+</html>
