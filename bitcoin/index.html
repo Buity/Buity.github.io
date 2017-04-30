@@ -43,8 +43,7 @@
 			document.getElementById("demo").innerHTML = jsonPretty;
 		    }
 		}
-		</script>
-		<script>
+		
 	xmlhttp.open("GET", "https://bitcoin.mubiz.com/info", true);
 	xmlhttp.send();</script>
 		<!-- Affichage Bitcoin info -->
@@ -58,13 +57,24 @@
 	</div>
 			</div>
 		</div>
-	<script>xmlhttp.open("GET", "https://bitcoin.mubiz.com/blockchaininfo", true);
+	<script> var xmlhttp = new XMLHttpRequest();
+		xmlhttp.onreadystatechange = function()
+		{
+		    if (this.readyState == 4 && this.status == 200) 
+		    {
+			var myObj = this.responseText;
+			var jsonPretty = JSON.stringify(JSON.parse(myObj),null,2);
+			document.getElementById("elt").innerHTML = jsonPretty;
+		    }
+		}
+		
+	xmlhttp.open("GET", "https://bitcoin.mubiz.com/info", true);
 	xmlhttp.send();</script>
 	<div class="container">
 			<div class="row">
 	<div class="col-xs-8">
     	<pre>
-        	<code id="demo" class="json kljs"></code>
+        	<code id="elt" class="json kljs"></code>
     	</pre>
 	</div>
 	</div>
