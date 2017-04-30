@@ -55,6 +55,21 @@
 	    <label class="sr-only" for="exampleInputIndex3"> Index</label>
 	    <input type="index" class="form-control" id="exampleInputIndex3" placeholder="Index">
 	  </div>
+	      
+	      <div class="container" padding-left="20px">
+		      <div id="qrcode">
+						<script type="text/javascript">
+						var qrcode = new QRCode(document.getElementById("qrcode"), {
+							text: "Bonjour",
+							width: 256,
+							height: 256,
+							colorDark : "#0000CD",
+							colorLight : "#ffffff",
+							correctLevel : QRCode.CorrectLevel.H
+						});
+						</script>
+		      </div>
+	      </div>
       </form>
 
        <button type="submit" class="btn btn-default text-center"> Submit </button>
