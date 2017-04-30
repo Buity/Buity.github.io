@@ -1,0 +1,94 @@
+<html>
+  <head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link rel="stylesheet" href="https://buity.github.io/css/style.css"/>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+	<link rel="shortcut" href="../../favicon.ico">
+	<title> Formulaire en ligne </title>
+  </head>
+  <body>
+
+	 <nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="https://buity.github.io/">LucOrne</a>
+    </div>
+	  <ul class="nav navbar-nav">
+      <li><a href="https://buity.github.io/">Home</a></li>
+	<li><a href="https://buity.github.io/bitcoin/">Bitcoin</a></li>
+	<li class="active"><a href="https://buity.github.io/bitcoin/explorer/"> Online form</a></li>
+	  </ul>
+  </div> 
+</nav>
+	  
+	  <div class="container theme-showcase text-left" role="main">
+		<div class="jumbotron">
+			<span style="color:darkgrey ;font-weight:bold"> <h1> Online form </h1> </span>
+		</div>
+	</div>
+	  
+<div class="container text-center">
+				      
+      <form class="form-inline">
+	  <div class="form-group">
+	    <label class="sr-only" for="exampleInputAdress3">Address</label>
+	    <input type="adress" class="form-control" id="exampleInputAdress3" placeholder="Adress">
+	  </div>
+	      
+
+	      <div class="form-group" margin="20px">
+		<label class="sr-only" for="exampleInputHash3"> Transaction hash</label>
+	    <input type="hash" class="form-control" id="exampleInputHash3" placeholder="Transaction hash">
+		  
+	      </div>	  
+      </form>
+
+      <form class="form-inline">
+	  <div class="form-group">
+	    <label class="sr-only" for="exampleInputHash3"> Block hash</label>
+	    <input type="hash" class="form-control" id="exampleInputHash3" placeholder="Block hash">
+		  
+	  </div>
+
+	      <div class="form-group">
+	    <label class="sr-only" for="exampleInputIndex3"> Index</label>
+	    <input type="index" class="form-control" id="exampleInputIndex3" placeholder="Index">
+	  </div>
+	      
+	      <div class="container" padding-left="20px">
+		      <div id="qrcode">
+						<script type="text/javascript">
+						var qrcode = new QRCode(document.getElementById("qrcode"), {
+							text: "Bonjour",
+							width: 256,
+							height: 256,
+							colorDark : "#0000CD",
+							colorLight : "#ffffff",
+							correctLevel : QRCode.CorrectLevel.H
+						});
+						</script>
+		      </div>
+	      </div>
+      </form>
+
+       <button type="submit" class="btn btn-default text-center"> Submit </button>
+	<script> var isAddress = /^[0-9a-zA-Z]{34}$/.test(data); function IsOk(isAdresse){
+		  if (isAdress==false)
+		  { return "Syntax error"}}</script>
+	
+	<script> var isHashBlock = /^#[0-9]{64}$/i.test(data);function IsOk(isHashBlock){
+		  if (isHashBlock==false)
+		  { return "Syntax error"}}</script>
+	
+	<script> var isHashTransaction = /^#[0-9A-F]{64}$/i.test(data);function IsOk(isHashTransaction){
+		  if (isHashTransaction==false)
+		  { return "Syntax error"}}</script>
+
+
+		</div>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="../custom.js"></script>
+  </body>
+</html>
