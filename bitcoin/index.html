@@ -51,7 +51,27 @@
         	<code id="demo" class="json kljs"></code>
     	</pre>
 	</div>
-			<div></div>
+	<script> var xmlhttp = new XMLHttpRequest();
+		xmlhttp.onreadystatechange = function()
+		{
+		    if (this.readyState == 4 && this.status == 200) 
+		    {
+			var myObj = this.responseText;
+			var jsonPretty = JSON.stringify(JSON.parse(myObj),null,2);
+			document.getElementById("demo").innerHTML = jsonPretty;
+		    }
+		}
+	
+	xmlhttp.open("GET", "https://bitcoin.mubiz.com/blockchaininfo", true);
+	xmlhttp.send();</script>
+	<div class="row">
+	<div class="col-xs-7 text-right">
+    	<pre>
+        	<code id="demo" class="json kljs"></code>
+    	</pre>
+	</div>
+			</div>
+				
 </div>
 		
 		
