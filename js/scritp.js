@@ -7,7 +7,7 @@ function homePageLoading(url,elementID)
 		    {
 			var myObj = this.responseText;
 			var jsonPretty = JSON.stringify(JSON.parse(myObj),null,2);
-			document.getElementById("demo").innerHTML = jsonPretty;
+			document.getElementById("elementID").innerHTML = jsonPretty;
 		    }
 		}
 	
