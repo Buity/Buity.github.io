@@ -11,7 +11,7 @@ xmlhttp.onreadystatechange = function() {
 xmlhttp.open("GET", "url", true);
 xmlhttp.send();
 
-};
+}
 
 
 
