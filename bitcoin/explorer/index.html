@@ -30,35 +30,42 @@
 	  
 <div class="container text-center">
 				      
-				      <form class="form-inline">
-					  <div class="form-group">
-					    <label class="sr-only" for="exampleInputAdress3">Address</label>
-					    <input type="adress" class="form-control" id="exampleInputAdress3" placeholder="Adress">
-						  <script> var isAddress = /^[0-9a-zA-Z]{34}$/.test(data); </script>
-					  </div>
-					      
-					      <div class="form-group">
-						<label class="sr-only" for="exampleInputHash3"> Transaction hash</label>
-					    <input type="hash" class="form-control" id="exampleInputHash3" placeholder="Transaction hash">
-						      <script> var isHashTransaction = /^#[0-9A-F]{64}$/i.test(data); </script>
-					      </div>	  
-				      </form>
-				      
-				      <form class="form-inline">
-					  <div class="form-group">
-					    <label class="sr-only" for="exampleInputHash3"> Bloc hash</label>
-					    <input type="hash" class="form-control" id="exampleInputHash3" placeholder="Bloc hash">
-					<script> var isHashTransaction = /^#[0-9A-F]{64}$/i.test(data); </script>
-					  </div>
-					      
-					      <div class="form-group">
-					    <label class="sr-only" for="exampleInputIndex3"> Index</label>
-					    <input type="index" class="form-control" id="exampleInputIndex3" placeholder="Index">
-					  </div>
-				      </form>
-				      
-				       <button type="submit" class="btn btn-default text-center"> Submit </button>
-				 
+      <form class="form-inline">
+	  <div class="form-group">
+	    <label class="sr-only" for="exampleInputAdress3">Address</label>
+	    <input type="adress" class="form-control" id="exampleInputAdress3" placeholder="Adress">
+		  <script> var isAddress = /^[0-9a-zA-Z]{34}$/.test(data); function IsOk(isAdresse){
+		  if (isAdress==false)
+		  { return "Syntax error"}}</script>
+	  </div>
+
+	      <div class="form-group">
+		<label class="sr-only" for="exampleInputHash3"> Transaction hash</label>
+	    <input type="hash" class="form-control" id="exampleInputHash3" placeholder="Transaction hash">
+		  <script> var isHashTransaction = /^#[0-9A-F]{64}$/i.test(data);function IsOk(isHashTransaction){
+		  if (isHashTransaction==false)
+		  { return "Syntax error"}}</script>
+	      </div>	  
+      </form>
+
+      <form class="form-inline">
+	  <div class="form-group">
+	    <label class="sr-only" for="exampleInputHash3"> Block hash</label>
+	    <input type="hash" class="form-control" id="exampleInputHash3" placeholder="Block hash">
+		  <script> var isHashBlock = /^#[0-9]{64}$/i.test(data);function IsOk(isHashBlock){
+		  if (isHashBlock==false)
+		  { return "Syntax error"}}</script>
+	  </div>
+
+	      <div class="form-group">
+	    <label class="sr-only" for="exampleInputIndex3"> Index</label>
+	    <input type="index" class="form-control" id="exampleInputIndex3" placeholder="Index">
+	  </div>
+      </form>
+
+       <button type="submit" class="btn btn-default text-center"> Submit </button>
+
+
 		</div>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
