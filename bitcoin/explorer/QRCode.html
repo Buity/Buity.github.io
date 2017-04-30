@@ -30,90 +30,33 @@
 		</div>
 	  </div>
 	  
-<div class="container text-center">
+	<div class="container text-center">
 				      
-      <form class="form-inline">
-	  <div class="form-group">
-	    <label class="sr-only" for="exampleInputAdress3">Address</label>
-	    <input type="adress" class="form-control" id="exampleInputAdress3" placeholder="Adress">
-	  </div>
-	      
+	  <div class="container" padding-left="20px">
+		<p> Voici le QRCode associé au mot "Bonjour" et celui associé à "Je suis le meilleur"<br/> </p>
+		  <div>
+			<div id="qrcode"></div>
+				<script type="text/javascript">
+				var qrcode = new QRCode(document.getElementById("qrcode"), {
+					text: "Bonjour",
+					width: 256,
+					height: 256,
+					colorDark : "#0000CD",
+					colorLight : "#ffffff",
+					correctLevel : QRCode.CorrectLevel.H
+				});
+				</script>
 
-	      <div class="form-group" margin="20px">
-		<label class="sr-only" for="exampleInputHash3"> Transaction hash</label>
-	    <input type="hash" class="form-control" id="exampleInputHash3" placeholder="Transaction hash">
-		  
-	      </div>	  
-      </form>
-
-      <form class="form-inline">
-	  <div class="form-group">
-	    <label class="sr-only" for="exampleInputHash3"> Block hash</label>
-	    <input type="hash" class="form-control" id="exampleInputHash3" placeholder="Block hash">
-		  
-	  </div>
-
-	      <div class="form-group">
-	    <label class="sr-only" for="exampleInputIndex3"> Index</label>
-	    <input type="index" class="form-control" id="exampleInputIndex3" placeholder="Index">
-	  </div>
-	      
-	      <div class="container" padding-left="20px">
-		      <div id="qrcode">
-						<script type="text/javascript">
-						var qrcode = new QRCode(document.getElementById("qrcode"), {
-							text: "Bonjour",
-							width: 256,
-							height: 256,
-							colorDark : "#0000CD",
-							colorLight : "#ffffff",
-							correctLevel : QRCode.CorrectLevel.H
-						});
-						</script>
-		      </div>
-	      </div>
-      </form>
-
-       <button type="submit" class="btn btn-default text-center"> Submit </button>
-	<script> var isAddress = /^[0-9a-zA-Z]{34}$/.test(data); function IsOk(isAdresse){
-		  if (isAdress==false)
-		  { return "Syntax error"}}</script>
-	
-	<script> var isHashBlock = /^#[0-9]{64}$/i.test(data);function IsOk(isHashBlock){
-		  if (isHashBlock==false)
-		  { return "Syntax error"}}</script>
-	
-	<script> var isHashTransaction = /^#[0-9A-F]{64}$/i.test(data);function IsOk(isHashTransaction){
-		  if (isHashTransaction==false)
-		  { return "Syntax error"}}</script>
-	
-		<div class=interieur>
-		
-				<h1>Générateur de QRCode</h1>
-				<p> Voici le QRCode associé au mot "Bonjour" et celui associé à "Je suis le meilleur"<br/> </p>
-					<div>
-						<div id="qrcode"></div>
-						<script type="text/javascript">
-						var qrcode = new QRCode(document.getElementById("qrcode"), {
-							text: "Bonjour",
-							width: 256,
-							height: 256,
-							colorDark : "#0000CD",
-							colorLight : "#ffffff",
-							correctLevel : QRCode.CorrectLevel.H
-						});
-						</script>
-						
-						<div id="qrcode2"></div>
-						<script type="text/javascript">
-						new QRCode(document.getElementById("qrcode2"), "Je suis le meilleur");
-						</script>
-					</div>
+				<div id="qrcode2"></div>
+				<script type="text/javascript">
+				new QRCode(document.getElementById("qrcode2"), "Je suis le meilleur");
+				</script>
+			</div>
 		</div>
-		</div>
+	</div>
 	  
-	    	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-		<script src="../custom.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="../custom.js"></script>
   </body>
 </html>
